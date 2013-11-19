@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Client_id: 
+  cardnumber: MyString
+  cardId: MyString
+  expirationdata: 2013-11-19
+  securitycode: MyString
+
+two:
+  Client_id: 
+  cardnumber: MyString
+  cardId: MyString
+  expirationdata: 2013-11-19
+  securitycode: MyString

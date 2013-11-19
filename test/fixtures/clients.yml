@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  User_id: 
+  sizeup: MyString
+  sizedown: 1
+  sizehoes: 1
+  IMEI: MyString
+
+two:
+  User_id: 
+  sizeup: MyString
+  sizedown: 1
+  sizehoes: 1
+  IMEI: MyString

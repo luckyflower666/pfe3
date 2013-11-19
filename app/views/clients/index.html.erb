@@ -1,0 +1,35 @@
+<h1>Listing clients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Sizeup</th>
+      <th>Sizedown</th>
+      <th>Sizehoes</th>
+      <th>Imei</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clients.each do |client| %>
+      <tr>
+        <td><%= User.find(client.User_id).name %></td>
+        <td><%= client.sizeup %></td>
+        <td><%= client.sizedown %></td>
+        <td><%= client.sizehoes %></td>
+        <td><%= client.IMEI %></td>
+        <td><%= link_to 'Show', client %></td>
+        <td><%= link_to 'Edit', edit_client_path(client) %></td>
+        <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Client', new_client_path %>

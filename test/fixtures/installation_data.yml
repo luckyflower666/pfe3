@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Client_id: 
+  objectId: MyString
+  appName: MyString
+  appVersion: MyString
+  badge: 1
+  deviceToken: MyString
+  deviceType: MyString
+  installationId: MyString
+  parseVersion: MyString
+  timeZone: MyString
+
+two:
+  Client_id: 
+  objectId: MyString
+  appName: MyString
+  appVersion: MyString
+  badge: 1
+  deviceToken: MyString
+  deviceType: MyString
+  installationId: MyString
+  parseVersion: MyString
+  timeZone: MyString

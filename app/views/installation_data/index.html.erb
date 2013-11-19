@@ -1,0 +1,45 @@
+<h1>Listing installation_data</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Client</th>
+      <th>Objectid</th>
+      <th>Appname</th>
+      <th>Appversion</th>
+      <th>Badge</th>
+      <th>Devicetoken</th>
+      <th>Devicetype</th>
+      <th>Installationid</th>
+      <th>Parseversion</th>
+      <th>Timezone</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @installation_data.each do |installation_datum| %>
+      <tr>
+        <td><%= User.find(Client.find(installation_datum.Client_id).User_id).name %></td>
+        <td><%= installation_datum.objectId %></td>
+        <td><%= installation_datum.appName %></td>
+        <td><%= installation_datum.appVersion %></td>
+        <td><%= installation_datum.badge %></td>
+        <td><%= installation_datum.deviceToken %></td>
+        <td><%= installation_datum.deviceType %></td>
+        <td><%= installation_datum.installationId %></td>
+        <td><%= installation_datum.parseVersion %></td>
+        <td><%= installation_datum.timeZone %></td>
+        <td><%= link_to 'Show', installation_datum %></td>
+        <td><%= link_to 'Edit', edit_installation_datum_path(installation_datum) %></td>
+        <td><%= link_to 'Destroy', installation_datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Installation datum', new_installation_datum_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Owner_id: 
+  name: MyString
+  address: MyString
+  city: MyString
+  country: MyString
+  numberfittingroom: 1
+  type: 
+
+two:
+  Owner_id: 
+  name: MyString
+  address: MyString
+  city: MyString
+  country: MyString
+  numberfittingroom: 1
+  type: 

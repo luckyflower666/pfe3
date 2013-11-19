@@ -1,0 +1,35 @@
+<h1>Listing social_data</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Client</th>
+      <th>Facebooktoken</th>
+      <th>Facebooksecret</th>
+      <th>Facebook</th>
+      <th>Twitter</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @social_data.each do |social_datum| %>
+      <tr>
+        <td><%= User.find(Client.find(social_datum.Client_id).User_id).name %></td>
+        <td><%= social_datum.facebookToken %></td>
+        <td><%= social_datum.facebookSecret %></td>
+        <td><%= social_datum.facebook %></td>
+        <td><%= social_datum.twitter %></td>
+        <td><%= link_to 'Show', social_datum %></td>
+        <td><%= link_to 'Edit', edit_social_datum_path(social_datum) %></td>
+        <td><%= link_to 'Destroy', social_datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Social datum', new_social_datum_path %>

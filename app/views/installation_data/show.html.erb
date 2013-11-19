@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @installation_datum.Client %>
+</p>
+
+<p>
+  <strong>Objectid:</strong>
+  <%= @installation_datum.objectId %>
+</p>
+
+<p>
+  <strong>Appname:</strong>
+  <%= @installation_datum.appName %>
+</p>
+
+<p>
+  <strong>Appversion:</strong>
+  <%= @installation_datum.appVersion %>
+</p>
+
+<p>
+  <strong>Badge:</strong>
+  <%= @installation_datum.badge %>
+</p>
+
+<p>
+  <strong>Devicetoken:</strong>
+  <%= @installation_datum.deviceToken %>
+</p>
+
+<p>
+  <strong>Devicetype:</strong>
+  <%= @installation_datum.deviceType %>
+</p>
+
+<p>
+  <strong>Installationid:</strong>
+  <%= @installation_datum.installationId %>
+</p>
+
+<p>
+  <strong>Parseversion:</strong>
+  <%= @installation_datum.parseVersion %>
+</p>
+
+<p>
+  <strong>Timezone:</strong>
+  <%= @installation_datum.timeZone %>
+</p>
+
+<%= link_to 'Edit', edit_installation_datum_path(@installation_datum) %> |
+<%= link_to 'Back', installation_data_path %>

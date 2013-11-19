@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @store.Owner %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @store.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @store.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @store.city %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @store.country %>
+</p>
+
+<p>
+  <strong>Numberfittingroom:</strong>
+  <%= @store.numberfittingroom %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @store.type %>
+</p>
+
+<%= link_to 'Edit', edit_store_path(@store) %> |
+<%= link_to 'Back', stores_path %>

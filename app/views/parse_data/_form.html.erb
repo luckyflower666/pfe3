@@ -1,0 +1,49 @@
+<%= form_for(@parse_datum) do |f| %>
+  <% if @parse_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@parse_datum.errors.count, "error") %> prohibited this parse_datum from being saved:</h2>
+
+      <ul>
+      <% @parse_datum.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :User_id %><br>
+    <%= f.text_field :User_id %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :authdata %><br>
+    <%= f.text_field :authdata %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :emailverified %><br>
+    <%= f.check_box :emailverified %>
+  </div>
+  <div class="field">
+    <%= f.label :ACL %><br>
+    <%= f.text_field :ACL %>
+  </div>
+  <div class="field">
+    <%= f.label :objectId %><br>
+    <%= f.text_field :objectId %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

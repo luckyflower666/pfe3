@@ -1,0 +1,37 @@
+<%= form_for(@social_datum) do |f| %>
+  <% if @social_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@social_datum.errors.count, "error") %> prohibited this social_datum from being saved:</h2>
+
+      <ul>
+      <% @social_datum.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Client_id %><br>
+    <%= f.text_field :Client_id %>
+  </div>
+  <div class="field">
+    <%= f.label :facebookToken %><br>
+    <%= f.text_field :facebookToken %>
+  </div>
+  <div class="field">
+    <%= f.label :facebookSecret %><br>
+    <%= f.text_field :facebookSecret %>
+  </div>
+  <div class="field">
+    <%= f.label :facebook %><br>
+    <%= f.text_field :facebook %>
+  </div>
+  <div class="field">
+    <%= f.label :twitter %><br>
+    <%= f.text_field :twitter %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

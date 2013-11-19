@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @preference.Client %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @preference.color %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @preference.brand %>
+</p>
+
+<p>
+  <strong>Theme:</strong>
+  <%= @preference.theme %>
+</p>
+
+<%= link_to 'Edit', edit_preference_path(@preference) %> |
+<%= link_to 'Back', preferences_path %>

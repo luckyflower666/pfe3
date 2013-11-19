@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @client.User %>
+</p>
+
+<p>
+  <strong>Sizeup:</strong>
+  <%= @client.sizeup %>
+</p>
+
+<p>
+  <strong>Sizedown:</strong>
+  <%= @client.sizedown %>
+</p>
+
+<p>
+  <strong>Sizehoes:</strong>
+  <%= @client.sizehoes %>
+</p>
+
+<p>
+  <strong>Imei:</strong>
+  <%= @client.IMEI %>
+</p>
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>

@@ -1,0 +1,57 @@
+<%= form_for(@installation_datum) do |f| %>
+  <% if @installation_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@installation_datum.errors.count, "error") %> prohibited this installation_datum from being saved:</h2>
+
+      <ul>
+      <% @installation_datum.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Client_id %><br>
+    <%= f.text_field :Client_id %>
+  </div>
+  <div class="field">
+    <%= f.label :objectId %><br>
+    <%= f.text_field :objectId %>
+  </div>
+  <div class="field">
+    <%= f.label :appName %><br>
+    <%= f.text_field :appName %>
+  </div>
+  <div class="field">
+    <%= f.label :appVersion %><br>
+    <%= f.text_field :appVersion %>
+  </div>
+  <div class="field">
+    <%= f.label :badge %><br>
+    <%= f.number_field :badge %>
+  </div>
+  <div class="field">
+    <%= f.label :deviceToken %><br>
+    <%= f.text_field :deviceToken %>
+  </div>
+  <div class="field">
+    <%= f.label :deviceType %><br>
+    <%= f.text_field :deviceType %>
+  </div>
+  <div class="field">
+    <%= f.label :installationId %><br>
+    <%= f.text_field :installationId %>
+  </div>
+  <div class="field">
+    <%= f.label :parseVersion %><br>
+    <%= f.text_field :parseVersion %>
+  </div>
+  <div class="field">
+    <%= f.label :timeZone %><br>
+    <%= f.text_field :timeZone %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

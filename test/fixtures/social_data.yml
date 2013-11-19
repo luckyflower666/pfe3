@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Client_id: 
+  facebookToken: MyString
+  facebookSecret: MyString
+  facebook: MyString
+  twitter: MyString
+
+two:
+  Client_id: 
+  facebookToken: MyString
+  facebookSecret: MyString
+  facebook: MyString
+  twitter: MyString

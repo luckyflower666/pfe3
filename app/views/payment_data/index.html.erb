@@ -1,0 +1,35 @@
+<h1>Listing payment_data</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Client</th>
+      <th>Cardnumber</th>
+      <th>Cardid</th>
+      <th>Expirationdata</th>
+      <th>Securitycode</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @payment_data.each do |payment_datum| %>
+      <tr>
+        <td><%= User.find(Client.find(payment_datum.Client_id).User_id).name %></td>
+        <td><%= payment_datum.cardnumber %></td>
+        <td><%= payment_datum.cardId %></td>
+        <td><%= payment_datum.expirationdata %></td>
+        <td><%= payment_datum.securitycode %></td>
+        <td><%= link_to 'Show', payment_datum %></td>
+        <td><%= link_to 'Edit', edit_payment_datum_path(payment_datum) %></td>
+        <td><%= link_to 'Destroy', payment_datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Payment datum', new_payment_datum_path %>

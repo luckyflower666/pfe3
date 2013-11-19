@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Client_id: 
+  color: MyString
+  brand: MyString
+  theme: MyString
+
+two:
+  Client_id: 
+  color: MyString
+  brand: MyString
+  theme: MyString

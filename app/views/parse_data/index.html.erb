@@ -1,0 +1,41 @@
+<h1>Listing parse_data</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Username</th>
+      <th>Password</th>
+      <th>Authdata</th>
+      <th>Email</th>
+      <th>Emailverified</th>
+      <th>Acl</th>
+      <th>Objectid</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parse_data.each do |parse_datum| %>
+      <tr>
+        <td><%= User.find(parse_datum.User_id).name %></td>
+        <td><%= parse_datum.username %></td>
+        <td><%= parse_datum.password %></td>
+        <td><%= parse_datum.authdata %></td>
+        <td><%= parse_datum.email %></td>
+        <td><%= parse_datum.emailverified %></td>
+        <td><%= parse_datum.ACL %></td>
+        <td><%= parse_datum.objectId %></td>
+        <td><%= link_to 'Show', parse_datum %></td>
+        <td><%= link_to 'Edit', edit_parse_datum_path(parse_datum) %></td>
+        <td><%= link_to 'Destroy', parse_datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Parse datum', new_parse_datum_path %>

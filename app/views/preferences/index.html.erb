@@ -1,0 +1,33 @@
+<h1>Listing preferences</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Client</th>
+      <th>Color</th>
+      <th>Brand</th>
+      <th>Theme</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @preferences.each do |preference| %>
+      <tr>
+        <td><%= User.find(Client.find(preference.Client_id).User_id).name %></td>
+        <td><%= preference.color %></td>
+        <td><%= preference.brand %></td>
+        <td><%= preference.theme %></td>
+        <td><%= link_to 'Show', preference %></td>
+        <td><%= link_to 'Edit', edit_preference_path(preference) %></td>
+        <td><%= link_to 'Destroy', preference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Preference', new_preference_path %>

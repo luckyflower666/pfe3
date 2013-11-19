@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @parse_datum.User %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @parse_datum.username %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @parse_datum.password %>
+</p>
+
+<p>
+  <strong>Authdata:</strong>
+  <%= @parse_datum.authdata %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @parse_datum.email %>
+</p>
+
+<p>
+  <strong>Emailverified:</strong>
+  <%= @parse_datum.emailverified %>
+</p>
+
+<p>
+  <strong>Acl:</strong>
+  <%= @parse_datum.ACL %>
+</p>
+
+<p>
+  <strong>Objectid:</strong>
+  <%= @parse_datum.objectId %>
+</p>
+
+<%= link_to 'Edit', edit_parse_datum_path(@parse_datum) %> |
+<%= link_to 'Back', parse_data_path %>

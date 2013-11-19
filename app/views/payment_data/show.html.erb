@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @payment_datum.Client %>
+</p>
+
+<p>
+  <strong>Cardnumber:</strong>
+  <%= @payment_datum.cardnumber %>
+</p>
+
+<p>
+  <strong>Cardid:</strong>
+  <%= @payment_datum.cardId %>
+</p>
+
+<p>
+  <strong>Expirationdata:</strong>
+  <%= @payment_datum.expirationdata %>
+</p>
+
+<p>
+  <strong>Securitycode:</strong>
+  <%= @payment_datum.securitycode %>
+</p>
+
+<%= link_to 'Edit', edit_payment_datum_path(@payment_datum) %> |
+<%= link_to 'Back', payment_data_path %>
