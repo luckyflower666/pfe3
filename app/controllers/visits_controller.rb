@@ -5,6 +5,8 @@ class VisitsController < ApplicationController
   # GET /visits.json
   def index
     @visits = Visit.all
+    @clients = Client.all
+    @stores = Store.all
   end
 
   # GET /visits/1

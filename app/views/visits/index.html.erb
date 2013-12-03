@@ -14,7 +14,7 @@
   <tbody>
     <% @visits.each do |visit| %>
       <tr>
-        <td><%= visit.Client %></td>
+        <td><%= User.find(Client.find(visit.Client_id).User_id).name %></td>
         <td><%= visit.timeinstore %></td>
         <td><%= link_to 'Show', visit %></td>
         <td><%= link_to 'Edit', edit_visit_path(visit) %></td>

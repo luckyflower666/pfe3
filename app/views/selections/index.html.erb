@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Visit</th>
+      <th>Visit_id</th>
       <th></th>
       <th></th>
       <th></th>
@@ -13,7 +13,7 @@
   <tbody>
     <% @selections.each do |selection| %>
       <tr>
-        <td><%= selection.Visit %></td>
+        <td><%= selection.Visit_id %></td>
         <td><%= link_to 'Show', selection %></td>
         <td><%= link_to 'Edit', edit_selection_path(selection) %></td>
         <td><%= link_to 'Destroy', selection, method: :delete, data: { confirm: 'Are you sure?' } %></td>

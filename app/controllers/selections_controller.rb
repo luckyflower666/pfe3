@@ -5,6 +5,7 @@ class SelectionsController < ApplicationController
   # GET /selections.json
   def index
     @selections = Selection.all
+    @visits = Visit.all
   end
 
   # GET /selections/1

@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Selection</th>
+      <th>Selection_id</th>
       <th>Sumup</th>
       <th></th>
       <th></th>
@@ -14,7 +14,7 @@
   <tbody>
     <% @orders.each do |order| %>
       <tr>
-        <td><%= order.Selection %></td>
+        <td><%= order.Selection_id %></td>
         <td><%= order.sumup %></td>
         <td><%= link_to 'Show', order %></td>
         <td><%= link_to 'Edit', edit_order_path(order) %></td>
