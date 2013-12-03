@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Selection:</strong>
+  <%= @item.Selection %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @item.title %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <%= @item.subtitle %>
+</p>
+
+<p>
+  <strong>Describe:</strong>
+  <%= @item.describe %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @item.state %>
+</p>
+
+<p>
+  <strong>Reference:</strong>
+  <%= @item.reference %>
+</p>
+
+<p>
+  <strong>Categorie:</strong>
+  <%= @item.categorie %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Item_id: 
+  uid_food: MyString
+
+two:
+  Item_id: 
+  uid_food: MyString

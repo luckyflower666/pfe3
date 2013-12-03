@@ -1,0 +1,35 @@
+<h1>Listing clothings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Size</th>
+      <th>Uid cloth</th>
+      <th>Brand</th>
+      <th>Color</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clothings.each do |clothing| %>
+      <tr>
+        <td><%= Item.find(clothing.Item_id).title %></td>
+        <td><%= clothing.size %></td>
+        <td><%= clothing.uid_cloth %></td>
+        <td><%= clothing.brand %></td>
+        <td><%= clothing.color %></td>
+        <td><%= link_to 'Show', clothing %></td>
+        <td><%= link_to 'Edit', edit_clothing_path(clothing) %></td>
+        <td><%= link_to 'Destroy', clothing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Clothing', new_clothing_path %>

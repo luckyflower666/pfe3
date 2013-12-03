@@ -1,4 +1,16 @@
 Pfe2::Application.routes.draw do
+  resources :foods
+
+  resources :clothings
+
+  resources :items
+
+  resources :orders
+
+  resources :selections
+
+  resources :visits
+
   get "welcome/index"
   resources :stores
 

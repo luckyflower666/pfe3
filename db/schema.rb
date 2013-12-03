@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131119132849) do
+ActiveRecord::Schema.define(version: 20131128150759) do
 
   create_table "clients", force: true do |t|
     t.integer  "User_id"
@@ -24,6 +24,27 @@ ActiveRecord::Schema.define(version: 20131119132849) do
   end
 
   add_index "clients", ["User_id"], name: "index_clients_on_User_id"
+
+  create_table "clothings", force: true do |t|
+    t.integer  "Item_id"
+    t.integer  "size"
+    t.string   "uid_cloth"
+    t.string   "brand"
+    t.string   "color"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "clothings", ["Item_id"], name: "index_clothings_on_Item_id"
+
+  create_table "foods", force: true do |t|
+    t.integer  "Item_id"
+    t.string   "uid_food"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "foods", ["Item_id"], name: "index_foods_on_Item_id"
 
   create_table "installation_data", force: true do |t|
     t.integer  "Client_id"
@@ -41,6 +62,29 @@ ActiveRecord::Schema.define(version: 20131119132849) do
   end
 
   add_index "installation_data", ["Client_id"], name: "index_installation_data_on_Client_id"
+
+  create_table "items", force: true do |t|
+    t.integer  "Selection_id"
+    t.string   "title"
+    t.string   "subtitle"
+    t.string   "describe"
+    t.string   "state"
+    t.string   "reference"
+    t.string   "categorie"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "items", ["Selection_id"], name: "index_items_on_Selection_id"
+
+  create_table "orders", force: true do |t|
+    t.integer  "Selection_id"
+    t.integer  "sumup"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "orders", ["Selection_id"], name: "index_orders_on_Selection_id"
 
   create_table "owners", force: true do |t|
     t.integer  "User_id"
@@ -91,6 +135,14 @@ ActiveRecord::Schema.define(version: 20131119132849) do
 
   add_index "preferences", ["Client_id"], name: "index_preferences_on_Client_id"
 
+  create_table "selections", force: true do |t|
+    t.integer  "Visit_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "selections", ["Visit_id"], name: "index_selections_on_Visit_id"
+
   create_table "social_data", force: true do |t|
     t.integer  "Client_id"
     t.string   "facebookToken"
@@ -125,5 +177,14 @@ ActiveRecord::Schema.define(version: 20131119132849) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "visits", force: true do |t|
+    t.integer  "Client_id"
+    t.integer  "timeinstore"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "visits", ["Client_id"], name: "index_visits_on_Client_id"
 
 end

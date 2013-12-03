@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Selection_id: 
+  title: MyString
+  subtitle: MyString
+  describe: MyString
+  state: MyString
+  reference: MyString
+  categorie: MyString
+
+two:
+  Selection_id: 
+  title: MyString
+  subtitle: MyString
+  describe: MyString
+  state: MyString
+  reference: MyString
+  categorie: MyString

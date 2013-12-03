@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  Client_id: 
+  timeinstore: 1
+
+two:
+  Client_id: 
+  timeinstore: 1

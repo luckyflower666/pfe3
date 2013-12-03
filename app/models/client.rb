@@ -4,4 +4,5 @@ class Client < ActiveRecord::Base
   has_one :Social_datum
   has_many :Preference
   has_one :Installation_datum
+  has_one :Visit
 end
